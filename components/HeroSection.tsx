@@ -48,7 +48,7 @@ const Feature = ({ text, icon, iconBg }: FeatureProps) => {
 
 export default function SplitWithImage() {
   return (
-    <Box bgColor={'gray.50'} pt={40} pb={20} px={4}>
+    <Box bgColor={'gray.100'} h={{ lg: '100vh' }} pt={40} pb={24} px={4}>
       <Container maxW={'1440px'}>
         <SimpleGrid
           alignItems="center"
@@ -87,7 +87,7 @@ export default function SplitWithImage() {
 
           <Image
             alt={'Banting Communications walkie talkie image'}
-            src={about1}
+            src={heroPhoto}
             objectFit={'contain'}
             style={{ borderRadius: '30px' }}
           />
