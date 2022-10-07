@@ -73,24 +73,44 @@ const Header = (props: Props) => {
           </HStack>
         </HStack>
 
-        <Flex
-          display={{ base: 'none', lg: 'flex' }}
-          gap={2}
-          p={2}
-          rounded="lg"
-          border="1px solid #128c7e"
-          as="a"
-          cursor={'pointer'}
-          target="_blank"
-          align="center"
-          _hover={{ bgColor: 'green.50' }}
-          href="https://wa.link/rqdzh2"
-        >
-          <RiWhatsappFill color="#128c7e" fontSize="1.2rem" />
-          <Text fontWeight="600" color="#128c7e">
-            Whatsapp
-          </Text>
-        </Flex>
+        <HStack gap={4}>
+          <Flex
+            display={{ base: 'none', lg: 'flex' }}
+            gap={2}
+            p={2}
+            rounded="lg"
+            border="1px solid #3b5998"
+            as="a"
+            cursor={'pointer'}
+            target="_blank"
+            align="center"
+            _hover={{ bgColor: 'blue.50' }}
+            href={'https://www.facebook.com/bantingcommunications'}
+          >
+            <RiFacebookFill color="#3b5998" fontSize="1.2rem" />
+            <Text fontWeight="600" color="#3b5998">
+              Facebook
+            </Text>
+          </Flex>
+          <Flex
+            display={{ base: 'none', lg: 'flex' }}
+            gap={2}
+            p={2}
+            rounded="lg"
+            border="1px solid #128c7e"
+            as="a"
+            cursor={'pointer'}
+            target="_blank"
+            align="center"
+            _hover={{ bgColor: 'green.50' }}
+            href="https://wa.link/rqdzh2"
+          >
+            <RiWhatsappFill color="#128c7e" fontSize="1.2rem" />
+            <Text fontWeight="600" color="#128c7e">
+              Whatsapp
+            </Text>
+          </Flex>
+        </HStack>
         {/* Mobile Menu*/}
 
         <Button

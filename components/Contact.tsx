@@ -35,7 +35,11 @@ const Contact = (props: Props) => {
           >
             Contact Us
           </Heading>
-          <SimpleGrid columns={{ base: 1, lg: 2 }} gap={{ base: 4, lg: 16 }}>
+          <SimpleGrid
+            alignItems="center"
+            columns={{ base: 1, lg: 2 }}
+            gap={{ base: 4, lg: 16 }}
+          >
             <Box>
               <Image src={contactImg} alt="contact" />
             </Box>
@@ -52,10 +56,19 @@ const Contact = (props: Props) => {
                     <Text mb={2} fontWeight="700" fontSize="xl">
                       Address :
                     </Text>
-                    <Text fontSize="xl">
+                    <Text fontSize="xl" pb={4}>
                       130, Jalan Sultan Alam Shah, 42700, Banting, Selangor
                       Darul Ehsan, Malaysia
                     </Text>
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15940.109114623865!2d101.4958925!3d2.8081449!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3d45c17c6f63d839!2sBanting%20Communications!5e0!3m2!1sen!2smy!4v1665131859914!5m2!1sen!2smy"
+                      width="100%"
+                      // height="auto"
+                      style={{ border: 0 }}
+                      allowFullScreen={true}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
                   </Box>
 
                   <Box>
@@ -77,9 +90,12 @@ const Contact = (props: Props) => {
                 </VStack>
 
                 <Button
+                  mt={8}
                   width="full"
                   variant="solid"
-                  colorScheme="blue"
+                  color="white"
+                  bgColor="teal.600"
+                  _hover={{ bgColor: 'teal.700' }}
                   type="submit"
                 >
                   Email Us Now !

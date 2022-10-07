@@ -9,19 +9,17 @@ import {
   useColorModeValue,
   Box,
   VStack,
+  Button,
+  HStack,
 } from '@chakra-ui/react'
-import { GiRadioTower, GiDatabase, GiHeadphones } from 'react-icons/gi'
-import { IoRadioOutline } from 'react-icons/io5'
 import { ReactElement } from 'react'
 import Image from 'next/image'
 import heroPhoto from '../public/heroEdited.png'
+import MytetraLogo from '../public/MytetraLogo.png'
+import iRadioLogo from '../public/iRadioLogo.png'
 import v68Iradio from '../public/v68Iradio.png'
 import cp268iRadio from '../public/cp268iRadio.png'
 import DM301Mytetra from '../public/DM301Mytetra.png'
-import about1 from '../public/about1.jpg'
-import about2 from '../public/about2.jpg'
-import about3 from '../public/about3.jpg'
-import about4 from '../public/about4.jpg'
 
 interface FeatureProps {
   text: string
@@ -67,7 +65,7 @@ export default function SplitWithImage() {
           columns={{ base: 1, lg: 2 }}
           spacing={10}
         >
-          <Stack spacing={4}>
+          <Stack mt={{ base: 2, lg: 8 }} mb={{ base: 12, lg: 0 }} spacing={4}>
             <Text
               textTransform={'uppercase'}
               color={'green.400'}
@@ -85,7 +83,7 @@ export default function SplitWithImage() {
               // color={'white'}
               color="green.900"
               as="h1"
-              size={{ base: '2xl', xl: '3xl' }}
+              size={{ base: '2xl', xl: '4xl' }}
             >
               Banting Communications
             </Heading>
@@ -103,72 +101,62 @@ export default function SplitWithImage() {
               <Text
                 rounded="lg"
                 // bgColor="whiteAlpha.700"
-                color={'gray.900'}
-                fontSize={'xl'}
-                p={4}
+                color={'gray.600'}
+                fontSize={{ base: 'xl', lg: '2xl' }}
+                mt={{ base: 4, lg: 8 }}
               >
-                Established in 1999, Banting Communications is a 100% Malaysian
-                company. Our combined strengths and capital resources enable us
-                to deliver sophisticated telecommunication solutions to
-                individuals, businesses, governments and institutions across the
-                country.
+                Banting Communications (M) Sdn Bhd is Sole Distributor on Iradio
+                and Mytetra Walkie Talkie in Malaysia
               </Text>
+            </Box>
+
+            <Box
+              maxWidth={{ base: 'none', lg: '450px' }}
+              as="form"
+              action="mailto:kkwong@banting.com.my"
+            >
+              <Button
+                rounded="2xl"
+                py={8}
+                mt={{ base: 8, lg: 16 }}
+                width="full"
+                variant="solid"
+                color="white"
+                bgColor="teal.600"
+                _hover={{ bgColor: 'teal.700' }}
+                // colorScheme="green"
+                type="submit"
+              >
+                <Text fontSize="xl">Email Us Now !</Text>
+              </Button>
             </Box>
           </Stack>
 
-          <Image
-            alt={'Banting Communications walkie talkie image'}
-            src={heroPhoto}
-            objectFit={'contain'}
-            // style={{ borderRadius: '30px' }}
-          />
-        </SimpleGrid>
+          <VStack alignItems="center" justify="center">
+            <Image
+              alt={'Banting Communications walkie talkie image'}
+              src={heroPhoto}
+              objectFit={'contain'}
+            />
 
-        <VStack
-          mt={{ base: 12, lg: 24 }}
-          py={4}
-          px={8}
-          rounded="3xl"
-          alignItems="center"
-          shadow="xl"
-          bgColor="whiteAlpha.800"
-        >
-          <Text
-            color="gray.800"
-            mb={{ base: 8, lg: 4 }}
-            fontSize="xl"
-            fontWeight="500"
-          >
-            Our Walkie-Talkie covers :
-          </Text>
-          <SimpleGrid
-            w="full"
-            mx="auto"
-            columns={{ base: 1, md: 2, lg: 4 }}
-            spacing={{ base: 8, lg: 12 }}
-          >
-            <Feature
-              icon={<Icon as={GiRadioTower} color={'yellow.800'} w={5} h={5} />}
-              iconBg={useColorModeValue('yellow.100', 'yellow.900')}
-              text={'Two-Way Radio Systems'}
-            />
-            <Feature
-              icon={<Icon as={GiDatabase} color={'green.500'} w={5} h={5} />}
-              iconBg={useColorModeValue('green.100', 'green.900')}
-              text={'Telemetry Systems'}
-            />
-            <Feature
-              icon={<Icon as={IoRadioOutline} color={'blue.500'} w={5} h={5} />}
-              iconBg={useColorModeValue('blue.100', 'blue.900')}
-              text={'Paging Systems'}
-            />
-            <Feature
-              icon={<Icon as={GiHeadphones} color={'purple.500'} w={5} h={5} />}
-              iconBg={useColorModeValue('purple.100', 'purple.900')}
-              text={'Telephony & Contact centre solutions'}
-            />
-          </SimpleGrid>
-        </VStack>
+            <HStack opacity="" pt={{ base: 16, lg: 24 }} gap={8}>
+              <Image
+                src={iRadioLogo}
+                height={50}
+                width={200}
+                objectFit="contain"
+                alt="Iradio Logo"
+              />
+              <Image
+                src={MytetraLogo}
+                height={50}
+                width={200}
+                objectFit="contain"
+                alt="mytetra logo"
+              />
+            </HStack>
+          </VStack>
+        </SimpleGrid>
       </Container>
     </Box>
   )

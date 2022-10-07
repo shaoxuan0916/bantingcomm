@@ -20,6 +20,7 @@ import Image from 'next/image'
 import { ProductCard } from '../components/Products'
 import { FcCheckmark } from 'react-icons/fc'
 import MytetraLogo from '../public/MytetraLogo.png'
+import DMRLogo from '../public/dmr-logo.jpg'
 import DM301MytetraSirim1 from '../public/DM301MytetraSirim1.jpeg'
 import DM301MytetraSirim2 from '../public/DM301MytetraSirim2.jpeg'
 import v68 from '../public/v68Iradio.png'
@@ -116,6 +117,7 @@ const products = (props: Props) => {
               objectFit="contain"
               alt="mytetra logo"
             />
+
             <Heading color={'green.900'} py={8} size="xl">
               DM301 Mytetra
             </Heading>
@@ -135,21 +137,25 @@ const products = (props: Props) => {
                 desc="Mytetra DM301 has features such as Real-time Communication, Battery Save / Warning, Three-pin Plug Charger and IP54."
               />
             </GridItem>
+
             <GridItem colSpan={3}>
               <Box mt={{ base: 8, lg: 0 }}>
-                <Text as="b" fontSize="2xl">
-                  <Highlight
-                    query="Functions"
-                    styles={{
-                      px: '2',
-                      py: '1',
-                      rounded: '5px',
-                      bg: 'yellow.100',
-                    }}
-                  >
-                    Functions
-                  </Highlight>
-                </Text>
+                <Box>
+                  <Text as="b" fontSize="2xl">
+                    <Highlight
+                      query="Functions"
+                      styles={{
+                        px: '2',
+                        py: '1',
+                        rounded: '5px',
+                        bg: 'yellow.100',
+                      }}
+                    >
+                      Functions
+                    </Highlight>
+                  </Text>
+                </Box>
+
                 <SimpleGrid
                   mt={8}
                   columns={{ base: 1, sm: 2 }}
