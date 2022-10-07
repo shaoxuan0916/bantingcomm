@@ -114,6 +114,7 @@ export default function SplitWithImage() {
               maxWidth={{ base: 'none', lg: '450px' }}
               as="form"
               action="mailto:kkwong@banting.com.my"
+              target="_top"
             >
               <Button
                 rounded="2xl"

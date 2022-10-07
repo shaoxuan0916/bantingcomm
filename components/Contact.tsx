@@ -50,6 +50,7 @@ const Contact = (props: Props) => {
                 spacing={8}
                 as="form"
                 action="mailto:kkwong@banting.com.my"
+                target="_top"
               >
                 <VStack alignItems="left" gap={8}>
                   <Box>
