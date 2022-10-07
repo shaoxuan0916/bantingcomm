@@ -114,6 +114,7 @@ const products = (props: Props) => {
               height={50}
               width={200}
               objectFit="contain"
+              alt="mytetra logo"
             />
             <Heading color={'green.900'} py={8} size="xl">
               DM301 Mytetra
@@ -206,7 +207,7 @@ const products = (props: Props) => {
                 >
                   <Tbody>
                     {tableGeneral.map((item: any) => (
-                      <Tr fontSize="sm">
+                      <Tr fontSize="sm" key={item.title}>
                         <Td maxWidth={32}>{item.title}</Td>
                         <Td>{item.value}</Td>
                       </Tr>
@@ -227,8 +228,8 @@ const products = (props: Props) => {
                 Sirim Certificate
               </Text>
               <Box pt={{ base: 8, lg: 20 }}>
-                <Image src={DM301MytetraSirim1} />
-                <Image src={DM301MytetraSirim2} />
+                <Image src={DM301MytetraSirim1} alt="dm301sirim" />
+                <Image src={DM301MytetraSirim2} alt="dm301sirim" />
               </Box>
             </VStack>
           </SimpleGrid>

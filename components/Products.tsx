@@ -46,7 +46,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         py={8}
         bgColor="gray.50"
       >
-        <Image src={imgSrc} objectFit={'contain'} height="350px" />
+        <Image
+          src={imgSrc}
+          objectFit={'contain'}
+          height="350px"
+          alt="product"
+        />
         <Text as="b" py={4} fontSize="3xl">
           {name}
         </Text>

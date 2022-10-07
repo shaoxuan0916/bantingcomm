@@ -33,6 +33,7 @@ import v68 from '../public/v68Iradio.png'
 import sirimV68 from '../public/v68IradioSirim.jpeg'
 import cp268 from '../public/cp268iRadio.png'
 import DM301 from '../public/DM301Mytetra.png'
+import { useState } from 'react'
 
 type Props = {}
 
@@ -123,8 +124,9 @@ const tableReceiving = [
   { title: 'Clustter Suppression', value: '≥ 65dB' },
 ]
 
-const products = (props: Props) => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+const Products = (props: Props) => {
+  const [show, setShow] = useState<boolean>(false)
+
   return (
     <>
       <Box pt={28} pb={24} px={4}>
@@ -140,6 +142,7 @@ const products = (props: Props) => {
               height={50}
               width={200}
               objectFit="contain"
+              alt="Iradio Logo"
             />
             <Heading color={'green.900'} py={8} size="xl">
               V68 Iradio
@@ -220,11 +223,15 @@ const products = (props: Props) => {
                 </Text>
 
                 <Box py={2}>
-                  <Button colorScheme="teal" variant="link" onClick={onOpen}>
+                  <Button
+                    colorScheme="teal"
+                    variant="link"
+                    onClick={() => setShow(true)}
+                  >
                     More Features
                   </Button>
 
-                  <Modal isOpen={isOpen} onClose={onClose}>
+                  <Modal isOpen={show} onClose={() => setShow(false)}>
                     <ModalOverlay />
                     <ModalContent>
                       <ModalHeader>V68 Iradio Features</ModalHeader>
@@ -252,7 +259,11 @@ const products = (props: Props) => {
                       </ModalBody>
 
                       <ModalFooter>
-                        <Button colorScheme="teal" mr={3} onClick={onClose}>
+                        <Button
+                          colorScheme="teal"
+                          mr={3}
+                          onClick={() => setShow(false)}
+                        >
                           Close
                         </Button>
                       </ModalFooter>
@@ -300,7 +311,7 @@ const products = (props: Props) => {
                 >
                   <Tbody>
                     {tableGeneral.map((item: any) => (
-                      <Tr fontSize="sm">
+                      <Tr fontSize="sm" key={item.title}>
                         <Td maxWidth={32}>{item.title}</Td>
                         <Td>{item.value}</Td>
                       </Tr>
@@ -329,7 +340,7 @@ const products = (props: Props) => {
                 >
                   <Tbody>
                     {tableTramsmitting.map((item) => (
-                      <Tr fontSize="sm">
+                      <Tr fontSize="sm" key={item.title}>
                         <Td maxWidth={32}>{item.title}</Td>
                         <Td>{item.value}</Td>
                       </Tr>
@@ -352,7 +363,7 @@ const products = (props: Props) => {
                 <Table mt={4} size="md" variant="striped">
                   <Tbody>
                     {tableReceiving.map((item) => (
-                      <Tr fontSize="sm">
+                      <Tr fontSize="sm" key={item.title}>
                         <Td maxWidth={32}>{item.title}</Td>
                         <Td>{item.value}</Td>
                       </Tr>
@@ -373,7 +384,7 @@ const products = (props: Props) => {
                 Sirim Certificate
               </Text>
               <Box pt={{ base: 8, lg: 20 }}>
-                <Image src={sirimV68} />
+                <Image src={sirimV68} alt="Iradio Logo" />
               </Box>
             </VStack>
           </SimpleGrid>
@@ -383,4 +394,4 @@ const products = (props: Props) => {
   )
 }
 
-export default products
+export default Products

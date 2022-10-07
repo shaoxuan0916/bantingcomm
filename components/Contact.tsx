@@ -37,7 +37,7 @@ const Contact = (props: Props) => {
           </Heading>
           <SimpleGrid columns={{ base: 1, lg: 2 }} gap={{ base: 4, lg: 16 }}>
             <Box>
-              <Image src={contactImg} />
+              <Image src={contactImg} alt="contact" />
             </Box>
             <Box bg="whiteAlpha.800" shadow="xl" borderRadius="lg" rounded="xl">
               <VStack

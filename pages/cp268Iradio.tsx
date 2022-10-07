@@ -135,6 +135,7 @@ const products = (props: Props) => {
               height={50}
               width={200}
               objectFit="contain"
+              alt="Iradio Logo"
             />
             <Heading color={'green.900'} py={8} size="xl">
               CP-268 Iradio
@@ -227,7 +228,7 @@ const products = (props: Props) => {
                 >
                   <Tbody>
                     {tableGeneral.map((item: any) => (
-                      <Tr fontSize="sm">
+                      <Tr fontSize="sm" key={item.title}>
                         <Td maxWidth={32}>{item.title}</Td>
                         <Td>{item.value}</Td>
                       </Tr>
@@ -256,7 +257,7 @@ const products = (props: Props) => {
                 >
                   <Tbody>
                     {tableTramsmitting.map((item) => (
-                      <Tr fontSize="sm">
+                      <Tr fontSize="sm" key={item.title}>
                         <Td maxWidth={32}>{item.title}</Td>
                         <Td>{item.value}</Td>
                       </Tr>
@@ -279,7 +280,7 @@ const products = (props: Props) => {
                 <Table mt={4} size="md" variant="striped">
                   <Tbody>
                     {tableReceiving.map((item) => (
-                      <Tr fontSize="sm">
+                      <Tr fontSize="sm" key={item.title}>
                         <Td maxWidth={32}>{item.title}</Td>
                         <Td>{item.value}</Td>
                       </Tr>
@@ -300,7 +301,7 @@ const products = (props: Props) => {
                 Sirim Certificate
               </Text>
               <Box pt={{ base: 8, lg: 20 }}>
-                <Image src={sirimCP268} />
+                <Image src={sirimCP268} alt="cp268 Sirim" />
               </Box>
             </VStack>
           </SimpleGrid>

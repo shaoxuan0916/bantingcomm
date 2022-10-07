@@ -60,7 +60,12 @@ export default function SmallCentered() {
         justify={'center'}
         align={'center'}
       >
-        <Image src={logo} height="40px" objectFit={'contain'} />
+        <Image
+          src={logo}
+          height="40px"
+          objectFit={'contain'}
+          alt="banting communications logo"
+        />
         <Stack direction={'row'} spacing={6}>
           <Link href={'/'}>Home</Link>
           <Link href={'/#products'}>Products</Link>
