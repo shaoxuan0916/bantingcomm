@@ -12,6 +12,7 @@ import {
   Button,
   HStack,
 } from '@chakra-ui/react'
+import Link from 'next/link'
 import { ReactElement } from 'react'
 import Image from 'next/image'
 import heroPhoto from '../public/heroEdited.png'
@@ -110,26 +111,23 @@ export default function SplitWithImage() {
               </Text>
             </Box>
 
-            <Box
-              maxWidth={{ base: 'none', lg: '450px' }}
-              as="form"
-              action="mailto:kkwong@banting.com.my"
-              target="_top"
-            >
-              <Button
-                rounded="2xl"
-                py={8}
-                mt={{ base: 8, lg: 16 }}
-                width="full"
-                variant="solid"
-                color="white"
-                bgColor="teal.600"
-                _hover={{ bgColor: 'teal.700' }}
-                // colorScheme="green"
-                type="submit"
-              >
-                <Text fontSize="xl">Email Us Now !</Text>
-              </Button>
+            <Box>
+              <Link href="/#contact">
+                <Button
+                  rounded="2xl"
+                  py={8}
+                  mt={{ base: 8, lg: 16 }}
+                  width="full"
+                  variant="solid"
+                  color="white"
+                  bgColor="teal.600"
+                  _hover={{ bgColor: 'teal.700' }}
+                  // colorScheme="green"'
+                  type="button"
+                >
+                  <Text fontSize="xl">Contact Us Now!</Text>
+                </Button>
+              </Link>
             </Box>
           </Stack>
 
