@@ -4,6 +4,7 @@ import {
   Container,
   Button,
   VStack,
+  Text,
   FormControl,
   FormLabel,
   Input,
@@ -11,6 +12,7 @@ import {
   InputLeftElement,
   Textarea,
   SimpleGrid,
+  Highlight,
 } from '@chakra-ui/react'
 import { MdOutlineEmail } from 'react-icons/md'
 import { BsPerson } from 'react-icons/bs'
@@ -22,11 +24,11 @@ type Props = {}
 const Contact = (props: Props) => {
   return (
     <div id="contact">
-      <Box mt={{ base: 8, lg: 12 }} px={4} pb={12}>
+      <Box bgColor="gray.100" mt={{ base: 8, lg: 12 }} px={4} pb={32} mb={12}>
         <Container maxW={'1440px'}>
           <Heading
             mb={{ base: 8, lg: 12 }}
-            pt={12}
+            pt={20}
             fontSize="4xl"
             color="teal.900"
             textAlign="center"
@@ -37,47 +39,51 @@ const Contact = (props: Props) => {
             <Box>
               <Image src={contactImg} />
             </Box>
-            <Box bg="white" shadow="xl" rounded="5xl" borderRadius="lg">
-              <VStack color="teal.900" p={8} spacing={5}>
-                <FormControl id="name">
-                  <FormLabel>Your Name</FormLabel>
-                  <InputGroup borderColor="#E0E1E7">
-                    <InputLeftElement
-                      pointerEvents="none"
-                      children={<BsPerson color="gray.800" />}
-                    />
-                    <Input type="text" size="md" placeholder="eg.  Henry Lim" />
-                  </InputGroup>
-                </FormControl>
-                <FormControl id="name">
-                  <FormLabel>Your Email</FormLabel>
-                  <InputGroup borderColor="#E0E1E7">
-                    <InputLeftElement
-                      pointerEvents="none"
-                      children={<MdOutlineEmail color="gray.800" />}
-                    />
-                    <Input
-                      type="email"
-                      size="md"
-                      placeholder="eg.  henry@gmail.com"
-                    />
-                  </InputGroup>
-                </FormControl>
-                <FormControl id="name">
-                  <FormLabel>Message</FormLabel>
-                  <Textarea
-                    borderColor="gray.300"
-                    _hover={{
-                      borderRadius: 'gray.300',
-                    }}
-                    placeholder="Type your messages here"
-                  />
-                </FormControl>
-                <FormControl id="name" float="right">
-                  <Button variant="solid" colorScheme="teal">
-                    Send Message
-                  </Button>
-                </FormControl>
+            <Box bg="whiteAlpha.800" shadow="xl" borderRadius="lg" rounded="xl">
+              <VStack
+                color="teal.900"
+                p={8}
+                spacing={8}
+                as="form"
+                action="mailto:kkwong@banting.com.my"
+              >
+                <VStack alignItems="left" gap={8}>
+                  <Box>
+                    <Text mb={2} fontWeight="700" fontSize="xl">
+                      Address :
+                    </Text>
+                    <Text fontSize="xl">
+                      130, Jalan Sultan Alam Shah, 42700, Banting, Selangor
+                      Darul Ehsan, Malaysia
+                    </Text>
+                  </Box>
+
+                  <Box>
+                    <Text mb={2} fontWeight="700" fontSize="xl">
+                      Contact us at :
+                    </Text>
+                    <Text fontSize="xl">+6 03-3181 2233 / +6 012-391 3333</Text>
+                    <Text fontSize="xl">kkwong@banting.com.my</Text>
+                  </Box>
+
+                  <Box>
+                    <Text mb={2} fontWeight="700" fontSize="xl">
+                      Opening hours
+                    </Text>
+                    <Text fontSize="xl">
+                      Monday to Friday 9:00 AM to 6:00 PM
+                    </Text>
+                  </Box>
+                </VStack>
+
+                <Button
+                  width="full"
+                  variant="solid"
+                  colorScheme="blue"
+                  type="submit"
+                >
+                  Email Us Now !
+                </Button>
               </VStack>
             </Box>
           </SimpleGrid>

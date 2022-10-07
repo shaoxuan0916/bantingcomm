@@ -5,6 +5,7 @@ import Router, { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import { AiOutlineDown } from 'react-icons/ai'
 import { HiMenu } from 'react-icons/hi'
+import { RiWhatsappFill, RiFacebookFill } from 'react-icons/ri'
 import LogoImage from '../../public/BatingCommunicationWalkieTalkieIradio.png'
 
 type Props = {}
@@ -45,6 +46,7 @@ const Header = (props: Props) => {
       >
         <HStack spacing="8">
           {/* TODO: ICON */}
+
           <Box
             pl={{ base: 4, lg: 0 }}
             cursor="pointer"
@@ -71,6 +73,24 @@ const Header = (props: Props) => {
           </HStack>
         </HStack>
 
+        <Flex
+          display={{ base: 'none', lg: 'flex' }}
+          gap={2}
+          p={2}
+          rounded="lg"
+          border="1px solid #128c7e"
+          as="a"
+          cursor={'pointer'}
+          target="_blank"
+          align="center"
+          _hover={{ bgColor: 'green.50' }}
+          href="https://wa.link/rqdzh2"
+        >
+          <RiWhatsappFill color="#128c7e" fontSize="1.2rem" />
+          <Text fontWeight="600" color="#128c7e">
+            Whatsapp
+          </Text>
+        </Flex>
         {/* Mobile Menu*/}
 
         <Button
@@ -113,6 +133,44 @@ const Header = (props: Props) => {
                 <Link href={menu.to}>{menu.label}</Link>
               </Box>
             ))}
+            <Flex
+              w="full"
+              maxWidth="500px"
+              gap={2}
+              p={2}
+              rounded="lg"
+              border="1px solid #128c7e"
+              as="a"
+              cursor={'pointer'}
+              target="_blank"
+              align="center"
+              href="https://wa.link/rqdzh2"
+              justify="center"
+            >
+              <RiWhatsappFill color="#128c7e" fontSize="1.2rem" />
+              <Text fontWeight="600" color="#128c7e">
+                Whatsapp
+              </Text>
+            </Flex>
+            <Flex
+              w="full"
+              maxWidth="500px"
+              gap={2}
+              p={2}
+              rounded="lg"
+              border="1px solid #3b5998"
+              as="a"
+              cursor={'pointer'}
+              target="_blank"
+              align="center"
+              href={'https://www.facebook.com/bantingcommunications'}
+              justify="center"
+            >
+              <RiFacebookFill color="#3b5998" fontSize="1.2rem" />
+              <Text fontWeight="600" color="#3b5998">
+                Facebook
+              </Text>
+            </Flex>
           </VStack>
         </Box>
       )}

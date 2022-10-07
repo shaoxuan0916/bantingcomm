@@ -14,7 +14,10 @@ import { GiRadioTower, GiDatabase, GiHeadphones } from 'react-icons/gi'
 import { IoRadioOutline } from 'react-icons/io5'
 import { ReactElement } from 'react'
 import Image from 'next/image'
-import heroPhoto from '../public/hero.png'
+import heroPhoto from '../public/heroEdited.png'
+import v68Iradio from '../public/v68Iradio.png'
+import cp268iRadio from '../public/cp268iRadio.png'
+import DM301Mytetra from '../public/DM301Mytetra.png'
 import about1 from '../public/about1.jpg'
 import about2 from '../public/about2.jpg'
 import about3 from '../public/about3.jpg'
@@ -48,7 +51,16 @@ const Feature = ({ text, icon, iconBg }: FeatureProps) => {
 
 export default function SplitWithImage() {
   return (
-    <Box bgColor={'gray.100'} h={{ lg: '100vh' }} pt={40} pb={24} px={4}>
+    <Box
+      // backgroundImage="url('https://source.unsplash.com/LVewTMR-J-A')"
+      // bgSize="cover"
+      // bgRepeat="no-repeat"
+      bgColor={'gray.100'}
+      h={{ lg: '100vh' }}
+      pt={{ base: 32, lg: 40 }}
+      pb={24}
+      px={4}
+    >
       <Container maxW={'1440px'}>
         <SimpleGrid
           alignItems="center"
@@ -70,26 +82,45 @@ export default function SplitWithImage() {
               About Us
             </Text>
             <Heading
-              color={'green.900'}
+              // color={'white'}
+              color="green.900"
               as="h1"
               size={{ base: '2xl', xl: '3xl' }}
             >
               Banting Communications
             </Heading>
+            <Heading
+              pt={{ base: 0, md: 2 }}
+              // color={'white'}
+              color="green.800"
+              as="h1"
+              size={{ base: 'lg', xl: 'xl' }}
+            >
+              (M) SDN BHD
+            </Heading>
 
-            <Text pt={{ base: 4, lg: 8 }} color={'gray.500'} fontSize={'xl'}>
-              Established in 1999, Banting Communications is a 100% Malaysian
-              company. Our combined strengths and capital resources enable us to
-              deliver sophisticated telecommunication solutions to individuals,
-              businesses, governments and institutions across the country.
-            </Text>
+            <Box pt={{ base: 4, lg: 8 }}>
+              <Text
+                rounded="lg"
+                // bgColor="whiteAlpha.700"
+                color={'gray.900'}
+                fontSize={'xl'}
+                p={4}
+              >
+                Established in 1999, Banting Communications is a 100% Malaysian
+                company. Our combined strengths and capital resources enable us
+                to deliver sophisticated telecommunication solutions to
+                individuals, businesses, governments and institutions across the
+                country.
+              </Text>
+            </Box>
           </Stack>
 
           <Image
             alt={'Banting Communications walkie talkie image'}
             src={heroPhoto}
             objectFit={'contain'}
-            style={{ borderRadius: '30px' }}
+            // style={{ borderRadius: '30px' }}
           />
         </SimpleGrid>
 
@@ -100,15 +131,20 @@ export default function SplitWithImage() {
           rounded="3xl"
           alignItems="center"
           shadow="xl"
-          bgColor="white"
+          bgColor="whiteAlpha.800"
         >
-          <Text color="gray.800" mb={{ base: 8, lg: 4 }} fontSize="lg" as="b">
+          <Text
+            color="gray.800"
+            mb={{ base: 8, lg: 4 }}
+            fontSize="xl"
+            fontWeight="500"
+          >
             Our Walkie-Talkie covers :
           </Text>
           <SimpleGrid
             w="full"
             mx="auto"
-            columns={{ base: 1, sm: 2, lg: 4 }}
+            columns={{ base: 1, md: 2, lg: 4 }}
             spacing={{ base: 8, lg: 12 }}
           >
             <Feature
