@@ -69,10 +69,10 @@ const Contact = (props: Props) => {
                   <FormControl width="" isRequired>
                     <FormLabel>Your Name</FormLabel>
                     <InputGroup borderColor="#E0E1E7">
-                      <InputLeftElement
+                      {/* <InputLeftElement
                         pointerEvents="none"
                         children={<BsPerson color="gray.800" />}
-                      />
+                      /> */}
                       <Input
                         type="text"
                         name="extra_name"
@@ -84,10 +84,10 @@ const Contact = (props: Props) => {
                   <FormControl isRequired>
                     <FormLabel>Your Email</FormLabel>
                     <InputGroup borderColor="#E0E1E7">
-                      <InputLeftElement
+                      {/* <InputLeftElement
                         pointerEvents="none"
                         children={<MdOutlineEmail color="gray.800" />}
-                      />
+                      /> */}
                       <Input
                         type="email"
                         name="extra_email"
