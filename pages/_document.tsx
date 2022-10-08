@@ -3,12 +3,8 @@ import { Html, Head, Main, NextScript } from 'next/document'
 export default function Document() {
   return (
     <Html>
-      <Head>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-5HYGEXR6WC"
-        ></script>
-      </Head>
+      <Head />
+
       <body>
         <Main />
         <NextScript />
