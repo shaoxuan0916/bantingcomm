@@ -5,7 +5,6 @@ import {
   Heading,
   Text,
   Stack,
-  Icon,
   useColorModeValue,
   Box,
   VStack,
@@ -18,9 +17,6 @@ import Image from 'next/image'
 import heroPhoto from '../public/heroEdited.png'
 import MytetraLogo from '../public/MytetraLogo.png'
 import iRadioLogo from '../public/iRadioLogo.png'
-import v68Iradio from '../public/v68Iradio.png'
-import cp268iRadio from '../public/cp268iRadio.png'
-import DM301Mytetra from '../public/DM301Mytetra.png'
 
 interface FeatureProps {
   text: string
@@ -106,8 +102,8 @@ export default function SplitWithImage() {
                 fontSize={{ base: 'xl', lg: '2xl' }}
                 mt={{ base: 4, lg: 8 }}
               >
-                Banting Communications (M) Sdn Bhd is Sole Distributor on Iradio
-                and Mytetra Walkie Talkie in Malaysia
+                Banting Communications (M) Sdn Bhd is <b>Sole Distributor</b> on
+                <b> Iradio</b> and <b>Mytetra</b> Walkie Talkie in Malaysia
               </Text>
             </Box>
 

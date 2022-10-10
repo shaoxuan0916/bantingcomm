@@ -9,12 +9,9 @@ import {
   FormLabel,
   Input,
   InputGroup,
-  InputLeftElement,
   Textarea,
   SimpleGrid,
 } from '@chakra-ui/react'
-import { MdOutlineEmail } from 'react-icons/md'
-import { BsPerson } from 'react-icons/bs'
 import Image from 'next/image'
 import contactImg from '../public/contact.svg'
 import contact2 from '../public/contact2.svg'

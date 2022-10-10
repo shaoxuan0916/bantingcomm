@@ -16,7 +16,6 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
-  useDisclosure,
   Flex,
   Table,
   TableContainer,
@@ -31,8 +30,6 @@ import { FcCheckmark } from 'react-icons/fc'
 import iRadioLogo from '../public/iRadioLogo.png'
 import v68 from '../public/v68Iradio.png'
 import sirimV68 from '../public/v68IradioSirim.jpeg'
-import cp268 from '../public/cp268iRadio.png'
-import DM301 from '../public/DM301Mytetra.png'
 import { useState } from 'react'
 
 type Props = {}

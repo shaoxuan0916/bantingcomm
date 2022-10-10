@@ -20,10 +20,8 @@ import Image from 'next/image'
 import { ProductCard } from '../components/Products'
 import { FcCheckmark } from 'react-icons/fc'
 import iRadioLogo from '../public/iRadioLogo.png'
-import v68 from '../public/v68Iradio.png'
 import sirimCP268 from '../public/cp268iRadioSirim.jpeg'
 import cp268 from '../public/cp268iRadio.png'
-import DM301 from '../public/DM301Mytetra.png'
 
 type Props = {}
 
