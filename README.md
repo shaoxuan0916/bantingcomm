@@ -1,4 +1,4 @@
-# This is SME landing page.
+# SME Landing Page.
 
 This is a fully responsive website.
 
