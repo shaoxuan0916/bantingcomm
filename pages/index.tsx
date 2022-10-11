@@ -43,11 +43,11 @@ const Home: NextPage = () => {
         <meta
           content="bantingcomm.com.my｜Walkie-Talkie Malaysia｜IRadio｜Mytetra｜Two-Way Radio Systems｜Telemetry Systems｜Telephony &amp; Contact centre solutions｜Paging Systems"
           property="twitter:title"
-        ></meta>
+        />
         <meta
           content="For many years, Banting Communications (M) Sdn Bhd has successfully developed, deployed and supported turnkey telecommunication systems. Our business strategy is to deliver solutions that are flexible and adaptable.｜Walkie-Talkie Malaysia｜IRadio｜Mytetra｜bantingcomm.com.my"
           property="twitter:description"
-        ></meta>
+        />
         <link rel="canonical" href="https://www.bantingcomm.com.my/" />
         <link
           rel="apple-touch-icon"
