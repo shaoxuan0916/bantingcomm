@@ -134,6 +134,7 @@ const products = (props: Props) => {
               width={200}
               objectFit="contain"
               alt="Iradio Logo"
+              priority={true}
             />
             <Heading color={'green.900'} py={8} size="xl">
               CP-268 Iradio
@@ -299,7 +300,7 @@ const products = (props: Props) => {
                 Sirim Certificate
               </Text>
               <Box pt={{ base: 8, lg: 20 }}>
-                <Image src={sirimCP268} alt="cp268 Sirim" />
+                <Image src={sirimCP268} alt="cp268 Sirim" priority={true} />
               </Box>
             </VStack>
           </SimpleGrid>

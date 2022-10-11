@@ -65,6 +65,7 @@ export default function SmallCentered() {
           height="40px"
           objectFit={'contain'}
           alt="banting communications logo"
+          priority={true}
         />
         <Stack direction={'row'} spacing={6}>
           <Link href={'/'}>Home</Link>

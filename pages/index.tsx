@@ -17,16 +17,29 @@ const Home: NextPage = () => {
         <meta
           content="For many years, Banting Communications (M) Sdn Bhd has successfully developed, deployed and supported turnkey telecommunication systems. Our business strategy is to deliver solutions that are flexible and adaptable.｜Walkie-Talkie Malaysia｜IRadio｜Mytetra｜bantingcomm.com.my"
           name="description"
-        ></meta>
-
+        />
+        <meta key="og_type" property="og:type" content="website" />
         <meta
           content="bantingcomm.com.my｜Walkie-Talkie Malaysia｜IRadio｜Mytetra｜Two-Way Radio Systems｜Telemetry Systems｜Telephony &amp; Contact centre solutions｜Paging Systems"
           property="og:title"
-        ></meta>
+        />
         <meta
           content="For many years, Banting Communications (M) Sdn Bhd has successfully developed, deployed and supported turnkey telecommunication systems. Our business strategy is to deliver solutions that are flexible and adaptable.｜Walkie-Talkie Malaysia｜IRadio｜Mytetra｜bantingcomm.com.my"
           property="og:description"
-        ></meta>
+        />
+        <meta key="og_locale" property="og:locale" content="en_IE" />
+        <meta
+          key="og_site_name"
+          property="og:site_name"
+          content="Banting Communications (M) Sdn Bhd"
+        />
+        <meta
+          key="og_url"
+          property="og:url"
+          content="https://www.bantingcomm.com.my/"
+        />
+        <meta name="robots" content="index,follow" />
+
         <meta
           content="bantingcomm.com.my｜Walkie-Talkie Malaysia｜IRadio｜Mytetra｜Two-Way Radio Systems｜Telemetry Systems｜Telephony &amp; Contact centre solutions｜Paging Systems"
           property="twitter:title"
@@ -35,6 +48,7 @@ const Home: NextPage = () => {
           content="For many years, Banting Communications (M) Sdn Bhd has successfully developed, deployed and supported turnkey telecommunication systems. Our business strategy is to deliver solutions that are flexible and adaptable.｜Walkie-Talkie Malaysia｜IRadio｜Mytetra｜bantingcomm.com.my"
           property="twitter:description"
         ></meta>
+        <link rel="canonical" href="https://www.bantingcomm.com.my/" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"

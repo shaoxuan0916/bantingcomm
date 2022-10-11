@@ -40,7 +40,7 @@ const Contact = (props: Props) => {
             gap={{ base: 4, lg: 16 }}
           >
             <Box>
-              <Image src={contactImg} alt="contact" />
+              <Image src={contactImg} alt="contact" priority={true} />
             </Box>
             <Box bg="whiteAlpha.800" shadow="xl" borderRadius="lg" rounded="xl">
               <VStack
@@ -189,7 +189,7 @@ const Contact = (props: Props) => {
               </VStack>
             </Box>
             <Box display={{ base: 'none', lg: 'flex' }}>
-              <Image src={contact2} alt="contact" />
+              <Image src={contact2} alt="contact" priority={true} />
             </Box>
           </SimpleGrid>
         </Container>

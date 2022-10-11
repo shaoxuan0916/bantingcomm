@@ -1,7 +1,6 @@
 import {
   Container,
   SimpleGrid,
-  Flex,
   Heading,
   Text,
   Stack,
@@ -12,44 +11,14 @@ import {
   HStack,
 } from '@chakra-ui/react'
 import Link from 'next/link'
-import { ReactElement } from 'react'
 import Image from 'next/image'
 import heroPhoto from '../public/heroEdited.png'
 import MytetraLogo from '../public/MytetraLogo.png'
 import iRadioLogo from '../public/iRadioLogo.png'
 
-interface FeatureProps {
-  text: string
-  iconBg: string
-  icon?: ReactElement
-}
-
-const Feature = ({ text, icon, iconBg }: FeatureProps) => {
-  return (
-    <Stack direction={'row'} align={'center'}>
-      <Flex
-        w={8}
-        h={8}
-        align={'center'}
-        justify={'center'}
-        rounded={'full'}
-        bg={iconBg}
-      >
-        {icon}
-      </Flex>
-      <Text color="gray.700" fontWeight={600}>
-        {text}
-      </Text>
-    </Stack>
-  )
-}
-
 export default function SplitWithImage() {
   return (
     <Box
-      // backgroundImage="url('https://source.unsplash.com/LVewTMR-J-A')"
-      // bgSize="cover"
-      // bgRepeat="no-repeat"
       bgColor={'gray.100'}
       h={{ lg: '100vh' }}
       pt={{ base: 32, lg: 40 }}
@@ -77,7 +46,6 @@ export default function SplitWithImage() {
               About Us
             </Text>
             <Heading
-              // color={'white'}
               color="green.900"
               as="h1"
               size={{ base: '2xl', xl: '4xl' }}
@@ -86,7 +54,6 @@ export default function SplitWithImage() {
             </Heading>
             <Heading
               pt={{ base: 0, md: 2 }}
-              // color={'white'}
               color="green.800"
               as="h1"
               size={{ base: 'lg', xl: 'xl' }}
@@ -97,7 +64,6 @@ export default function SplitWithImage() {
             <Box pt={{ base: 4, lg: 8 }}>
               <Text
                 rounded="lg"
-                // bgColor="whiteAlpha.700"
                 color={'gray.600'}
                 fontSize={{ base: 'xl', lg: '2xl' }}
                 mt={{ base: 4, lg: 8 }}
@@ -118,7 +84,6 @@ export default function SplitWithImage() {
                   color="white"
                   bgColor="teal.600"
                   _hover={{ bgColor: 'teal.700' }}
-                  // colorScheme="green"'
                   type="button"
                 >
                   <Text fontSize="xl">Contact Us Now!</Text>
@@ -132,6 +97,7 @@ export default function SplitWithImage() {
               alt={'Banting Communications walkie talkie image'}
               src={heroPhoto}
               objectFit={'contain'}
+              priority={true}
             />
 
             <HStack opacity="" pt={{ base: 16, lg: 24 }} gap={8}>
@@ -141,6 +107,7 @@ export default function SplitWithImage() {
                 width={200}
                 objectFit="contain"
                 alt="Iradio Logo"
+                priority={true}
               />
               <Image
                 src={MytetraLogo}
@@ -148,6 +115,7 @@ export default function SplitWithImage() {
                 width={200}
                 objectFit="contain"
                 alt="mytetra logo"
+                priority={true}
               />
             </HStack>
           </VStack>

@@ -51,6 +51,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           objectFit={'contain'}
           height="350px"
           alt="product"
+          priority={true}
         />
         <Text as="b" py={4} fontSize="3xl">
           {name}

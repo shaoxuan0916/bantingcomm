@@ -52,7 +52,13 @@ const Header = (props: Props) => {
             cursor="pointer"
             onClick={() => Router.push('/')}
           >
-            <Image src={LogoImage} height={45} width={113} layout="fixed" />
+            <Image
+              src={LogoImage}
+              height={45}
+              width={113}
+              layout="fixed"
+              priority={true}
+            />
           </Box>
 
           <HStack pl={40} spacing="16" display={{ base: 'none', lg: 'flex' }}>

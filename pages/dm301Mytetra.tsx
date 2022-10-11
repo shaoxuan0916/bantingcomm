@@ -113,6 +113,7 @@ const products = (props: Props) => {
               width={200}
               objectFit="contain"
               alt="mytetra logo"
+              priority={true}
             />
 
             <Heading color={'green.900'} py={8} size="xl">
@@ -231,8 +232,16 @@ const products = (props: Props) => {
                 Sirim Certificate
               </Text>
               <Box pt={{ base: 8, lg: 20 }}>
-                <Image src={DM301MytetraSirim1} alt="dm301sirim" />
-                <Image src={DM301MytetraSirim2} alt="dm301sirim" />
+                <Image
+                  src={DM301MytetraSirim1}
+                  alt="dm301sirim"
+                  priority={true}
+                />
+                <Image
+                  src={DM301MytetraSirim2}
+                  alt="dm301sirim"
+                  priority={true}
+                />
               </Box>
             </VStack>
           </SimpleGrid>
