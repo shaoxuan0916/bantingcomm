@@ -1,30 +1,31 @@
-import { Box, Button, HStack, Icon, Text, VStack, Flex } from '@chakra-ui/react'
-import Image from 'next/image'
-import Link from 'next/link'
-import Router from 'next/router'
-import { useState } from 'react'
-import { AiOutlineDown } from 'react-icons/ai'
-import { HiMenu } from 'react-icons/hi'
-import { RiWhatsappFill, RiFacebookFill } from 'react-icons/ri'
-import LogoImage from '../../public/BatingCommunicationWalkieTalkieIradio.png'
+import { Box, Button, HStack, Icon, Text, VStack, Flex } from "@chakra-ui/react"
+import Image from "next/image"
+import Link from "next/link"
+import Router from "next/router"
+import { useState } from "react"
+import { AiOutlineDown } from "react-icons/ai"
+import { HiMenu } from "react-icons/hi"
+import { RiWhatsappFill, RiFacebookFill } from "react-icons/ri"
+import LogoImage from "../../public/BatingCommunicationWalkieTalkieIradio.png"
 
 type Props = {}
 
 const Header = (props: Props) => {
+  const temp = ""
   const [showMenu, setShowMenu] = useState<boolean>()
 
   const menus = [
     {
-      label: 'Home',
-      to: '/',
+      label: "Home",
+      to: "/",
     },
     {
-      label: 'Our Products',
-      to: '/#products',
+      label: "Our Products",
+      to: "/#products",
     },
     {
-      label: 'Contact',
-      to: '/#contact',
+      label: "Contact",
+      to: "/#contact",
     },
   ]
 
@@ -50,7 +51,7 @@ const Header = (props: Props) => {
           <Box
             pl={{ base: 4, lg: 0 }}
             cursor="pointer"
-            onClick={() => Router.push('/')}
+            onClick={() => Router.push("/")}
           >
             <Image
               src={LogoImage}
@@ -61,7 +62,7 @@ const Header = (props: Props) => {
             />
           </Box>
 
-          <HStack pl={40} spacing="16" display={{ base: 'none', lg: 'flex' }}>
+          <HStack pl={40} spacing="16" display={{ base: "none", lg: "flex" }}>
             {menus.map((menu) => (
               <Box key={menu.label}>
                 <Link href={menu.to}>
@@ -69,7 +70,7 @@ const Header = (props: Props) => {
                     fontSize={20}
                     cursor="pointer"
                     color="blackAlpha.800"
-                    _hover={{ color: 'blackAlpha.600' }}
+                    _hover={{ color: "blackAlpha.600" }}
                   >
                     {menu.label}
                   </Text>
@@ -81,17 +82,17 @@ const Header = (props: Props) => {
 
         <HStack gap={4}>
           <Flex
-            display={{ base: 'none', lg: 'flex' }}
+            display={{ base: "none", lg: "flex" }}
             gap={2}
             p={2}
             rounded="lg"
             border="1px solid #3b5998"
             as="a"
-            cursor={'pointer'}
+            cursor={"pointer"}
             target="_blank"
             align="center"
-            _hover={{ bgColor: 'blue.50' }}
-            href={'https://www.facebook.com/bantingcommunications'}
+            _hover={{ bgColor: "blue.50" }}
+            href={"https://www.facebook.com/bantingcommunications"}
           >
             <RiFacebookFill color="#3b5998" fontSize="1.2rem" />
             <Text fontWeight="600" color="#3b5998">
@@ -99,16 +100,16 @@ const Header = (props: Props) => {
             </Text>
           </Flex>
           <Flex
-            display={{ base: 'none', lg: 'flex' }}
+            display={{ base: "none", lg: "flex" }}
             gap={2}
             p={2}
             rounded="lg"
             border="1px solid #128c7e"
             as="a"
-            cursor={'pointer'}
+            cursor={"pointer"}
             target="_blank"
             align="center"
-            _hover={{ bgColor: 'green.50' }}
+            _hover={{ bgColor: "green.50" }}
             href="https://wa.link/rqdzh2"
           >
             <RiWhatsappFill color="#128c7e" fontSize="1.2rem" />
@@ -120,7 +121,7 @@ const Header = (props: Props) => {
         {/* Mobile Menu*/}
 
         <Button
-          display={{ base: 'flex', lg: 'none' }}
+          display={{ base: "flex", lg: "none" }}
           rightIcon={
             <Box
               transform={`rotate(${showMenu ? 180 : 0}deg)`}
@@ -153,7 +154,7 @@ const Header = (props: Props) => {
               <Box
                 key={menu.label}
                 fontSize={20}
-                _hover={{ color: 'blackAlpha.600' }}
+                _hover={{ color: "blackAlpha.600" }}
                 onClick={() => setShowMenu(false)}
               >
                 <Link href={menu.to}>{menu.label}</Link>
@@ -167,7 +168,7 @@ const Header = (props: Props) => {
               rounded="lg"
               border="1px solid #128c7e"
               as="a"
-              cursor={'pointer'}
+              cursor={"pointer"}
               target="_blank"
               align="center"
               href="https://wa.link/rqdzh2"
@@ -186,10 +187,10 @@ const Header = (props: Props) => {
               rounded="lg"
               border="1px solid #3b5998"
               as="a"
-              cursor={'pointer'}
+              cursor={"pointer"}
               target="_blank"
               align="center"
-              href={'https://www.facebook.com/bantingcommunications'}
+              href={"https://www.facebook.com/bantingcommunications"}
               justify="center"
             >
               <RiFacebookFill color="#3b5998" fontSize="1.2rem" />
