@@ -1,9 +1,9 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import HeroSection from '../components/HeroSection'
-import Contact from '../components/Contact'
-import Products from '../components/Products'
-import Reviews from '../components/Reviews'
+import type { NextPage } from "next"
+import Head from "next/head"
+import HeroSection from "../components/HeroSection"
+import Contact from "../components/Contact"
+import Products from "../components/Products"
+import Reviews from "../components/Reviews"
 
 const Home: NextPage = () => {
   return (
@@ -12,7 +12,8 @@ const Home: NextPage = () => {
         <title>
           Banting Communications (M) Sdn Bhd｜Walkie-Talkie
           Malaysia｜IRadio｜Mytetra｜Two-Way Radio Systems｜Telemetry
-          Systems｜Telephony &amp; Contact centre solutions｜Paging Systems
+          Systems｜Telephony &amp; Contact centre solutions｜Walkie Talkie
+          Terbaik
         </title>
         <meta
           content="For many years, Banting Communications (M) Sdn Bhd has successfully developed, deployed and supported turnkey telecommunication systems. Our business strategy is to deliver solutions that are flexible and adaptable.｜Walkie-Talkie Malaysia｜IRadio｜Mytetra｜bantingcomm.com.my"
