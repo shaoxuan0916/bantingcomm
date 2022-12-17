@@ -16,6 +16,10 @@ const Home: NextPage = () => {
           Terbaik
         </title>
         <meta
+          name="google-site-verification"
+          content="MfgTPPe2ciU33LpFMNzhOmDvCfr0VCBkTJm3Qt_tFMI"
+        />
+        <meta
           content="For many years, Banting Communications (M) Sdn Bhd has successfully developed, deployed and supported turnkey telecommunication systems. Our business strategy is to deliver solutions that are flexible and adaptable.｜Walkie-Talkie Malaysia｜IRadio｜Mytetra｜bantingcomm.com.my"
           name="description"
         />
