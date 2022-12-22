@@ -6,12 +6,19 @@ import {
   VStack,
   Text,
   Button,
-} from '@chakra-ui/react'
-import Image from 'next/image'
-import v68 from '../public/v68Iradio.png'
-import cp268 from '../public/cp268iRadio.png'
-import DM301 from '../public/DM301Mytetra.png'
-import Link from 'next/link'
+} from "@chakra-ui/react"
+import Image from "next/image"
+import v68 from "../public/v68Iradio.png"
+import cp268 from "../public/cp268iRadio.png"
+import DM301 from "../public/DM301Mytetra.png"
+import CP268Battery from "../public/CP268Battery.png"
+import CP268Charger from "../public/CP268Charger.png"
+import Earpiece from "../public/Earpiece.png"
+import V68Battery from "../public/V68Battery.png"
+import V68Charger from "../public/V68Charger.png"
+import DM301Battery from "../public/DM301Battery.png"
+import DM301Charger from "../public/DM301Charger.png"
+import Link from "next/link"
 
 interface ProductsProps {}
 
@@ -24,6 +31,88 @@ interface ProductCardProps {
   actionBtn?: boolean
   noOfLines?: number
 }
+interface AccessoryCardProps {
+  hover?: boolean
+  imgSrc: any
+  name: string
+}
+
+export const AccessoryCard: React.FC<AccessoryCardProps> = ({
+  hover,
+  imgSrc,
+  name,
+}) => {
+  return (
+    <>
+      <VStack
+        _hover={hover ? { shadow: "xl", transform: "scale(1.05)" } : {}}
+        transition="transform 0.15s ease-in-out"
+        cursor="pointer"
+        shadow="md"
+        rounded="3xl"
+        px={2}
+        py={8}
+        bgColor="gray.50"
+      >
+        <Image
+          src={imgSrc}
+          objectFit="contain"
+          height={"300px"}
+          width={"200px"}
+          alt="accessories"
+          priority={true}
+        />
+        <Text
+          fontWeight={"semibold"}
+          fontSize={{ base: "md", sm: "lg", lg: "xl", xl: "2xl" }}
+          textAlign={"center"}
+        >
+          {name}
+        </Text>
+      </VStack>
+    </>
+  )
+}
+
+export const Accessories = () => {
+  return (
+    <>
+      <SimpleGrid gap={8} columns={{ base: 2, md: 3, lg: 4 }}>
+        <AccessoryCard
+          hover
+          imgSrc={CP268Battery}
+          name="Iradio CP268 Battery"
+        />
+        <AccessoryCard
+          hover
+          imgSrc={CP268Charger}
+          name="Iradio CP268 Rapid Charger"
+        />
+        <AccessoryCard hover imgSrc={V68Battery} name="Iradio V68 Battery" />
+        <AccessoryCard
+          hover
+          imgSrc={V68Charger}
+          name="Iradio V68 Rapid Charger"
+        />
+        <AccessoryCard
+          hover
+          imgSrc={DM301Battery}
+          name="Mytetra DM301 Battery"
+        />
+        <AccessoryCard
+          hover
+          imgSrc={DM301Charger}
+          name="Mytetra DM301 Rapid Charger"
+        />
+        <AccessoryCard
+          hover
+          imgSrc={Earpiece}
+          name="Iradio / Mytetra Surveillance Earpice"
+        />
+      </SimpleGrid>
+    </>
+  )
+}
 
 export const ProductCard: React.FC<ProductCardProps> = ({
   url,
@@ -35,9 +124,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   noOfLines,
 }) => {
   return (
-    <Link href={url ? url : ''}>
+    <Link href={url ? url : ""}>
       <VStack
-        _hover={hover ? { shadow: 'xl', transform: 'scale(1.05)' } : {}}
+        _hover={hover ? { shadow: "xl", transform: "scale(1.05)" } : {}}
         transition="transform 0.15s ease-in-out"
         cursor="pointer"
         shadow="md"
@@ -48,7 +137,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       >
         <Image
           src={imgSrc}
-          objectFit={'contain'}
+          objectFit={"contain"}
           height="350px"
           alt="product"
           priority={true}
@@ -80,7 +169,7 @@ const Products: React.FC<ProductsProps> = ({}) => {
   return (
     <div id="products">
       <Box py={{ base: 8, lg: 12 }} px={4}>
-        <Container maxW={'1440px'}>
+        <Container maxW={"1440px"}>
           <Heading
             mb={{ base: 8, lg: 12 }}
             pt={12}
@@ -122,6 +211,20 @@ const Products: React.FC<ProductsProps> = ({}) => {
               desc="Mytetra DM301 has features such as Real-time Communication, Battery Save / Warning, Three-pin Plug Charger and IP54."
             />
           </SimpleGrid>
+
+          {/* Accessories */}
+          <Heading
+            mt={{ base: 8, lg: 12 }}
+            mb={{ base: 8, lg: 12 }}
+            pt={12}
+            fontSize="4xl"
+            color="primary.900"
+            textAlign="center"
+          >
+            Accessories
+          </Heading>
+
+          <Accessories />
         </Container>
       </Box>
     </div>
