@@ -1,12 +1,13 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
-import { ChakraProvider } from '@chakra-ui/react'
-import customTheme from '../utils/theme'
-import BaseLayout from '../layouts/BaseLayout'
-import { useEffect } from 'react'
-import Script from 'next/script'
-import { useRouter } from 'next/router'
-import * as gtag from '../lib/gtag'
+import "../styles/globals.css"
+import type { AppProps } from "next/app"
+import { ChakraProvider } from "@chakra-ui/react"
+import customTheme from "../utils/theme"
+import BaseLayout from "../layouts/BaseLayout"
+import { useEffect } from "react"
+import Script from "next/script"
+import { useRouter } from "next/router"
+import * as gtag from "../lib/gtag"
+import Head from "next/head"
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
@@ -14,11 +15,11 @@ function MyApp({ Component, pageProps }: AppProps) {
     const handleRouteChange = (url: any) => {
       gtag.pageview(url)
     }
-    router.events.on('routeChangeComplete', handleRouteChange)
-    router.events.on('hashChangeComplete', handleRouteChange)
+    router.events.on("routeChangeComplete", handleRouteChange)
+    router.events.on("hashChangeComplete", handleRouteChange)
     return () => {
-      router.events.off('routeChangeComplete', handleRouteChange)
-      router.events.off('hashChangeComplete', handleRouteChange)
+      router.events.off("routeChangeComplete", handleRouteChange)
+      router.events.off("hashChangeComplete", handleRouteChange)
     }
   }, [router.events])
   return (
@@ -49,6 +50,13 @@ function MyApp({ Component, pageProps }: AppProps) {
           `,
         }}
       />
+
+      <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+        />
+      </Head>
       <ChakraProvider theme={customTheme}>
         <BaseLayout>
           <Component {...pageProps} />

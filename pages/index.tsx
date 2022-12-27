@@ -11,8 +11,7 @@ const Home: NextPage = () => {
       <Head>
         <title>
           Banting Communications (M) Sdn Bhd｜Walkie-Talkie
-          Malaysia｜IRadio｜Mytetra｜Two-Way Radio Systems｜Telemetry
-          Systems｜Telephony &amp; Contact centre solutions｜Walkie Talkie
+          Malaysia｜IRadio｜Mytetra｜Two-Way Radio Systems｜Walkie Talkie
           Terbaik
         </title>
         <meta
@@ -20,16 +19,16 @@ const Home: NextPage = () => {
           content="MfgTPPe2ciU33LpFMNzhOmDvCfr0VCBkTJm3Qt_tFMI"
         />
         <meta
-          content="For many years, Banting Communications (M) Sdn Bhd has successfully developed, deployed and supported turnkey telecommunication systems. Our business strategy is to deliver solutions that are flexible and adaptable.｜Walkie-Talkie Malaysia｜IRadio｜Mytetra｜bantingcomm.com.my"
+          content="Banting Communications (M) Sdn Bhd | Walkie Terbaik｜Walkie-Talkie Malaysia｜IRadio｜Mytetra｜bantingcomm.com.my"
           name="description"
         />
         <meta key="og_type" property="og:type" content="website" />
         <meta
-          content="bantingcomm.com.my｜Walkie-Talkie Malaysia｜IRadio｜Mytetra｜Two-Way Radio Systems｜Telemetry Systems｜Telephony &amp; Contact centre solutions｜Paging Systems"
+          content="bantingcomm.com.my｜Walkie-Talkie Malaysia｜IRadio｜Mytetra｜Two-Way Radio Systems｜Telemetry Systems | Paging Systems"
           property="og:title"
         />
         <meta
-          content="For many years, Banting Communications (M) Sdn Bhd has successfully developed, deployed and supported turnkey telecommunication systems. Our business strategy is to deliver solutions that are flexible and adaptable.｜Walkie-Talkie Malaysia｜IRadio｜Mytetra｜bantingcomm.com.my"
+          content="Banting Communications (M) Sdn Bhd | Walkie Talkie Supllier Malaysia ｜Walkie-Talkie Terbaik｜Iradio｜Mytetra｜bantingcomm.com.my"
           property="og:description"
         />
         <meta key="og_locale" property="og:locale" content="en_IE" />
