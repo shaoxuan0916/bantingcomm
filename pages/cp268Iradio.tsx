@@ -123,7 +123,7 @@ const products = (props: Props) => {
     <div>
       <Head>
         <title>CP-268 Iradio｜Walkie-Talkie Malaysia</title>
-        <meta content="iRadio V68" property="og:title" />
+        <meta content="iRadio CP-268" property="og:title" />
         <meta name="robots" content="index,follow" />
         <link
           rel="canonical"
