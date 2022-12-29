@@ -23,114 +23,121 @@ import {
   Td,
   Tbody,
   Highlight,
-} from '@chakra-ui/react'
-import Image from 'next/image'
-import { ProductCard } from '../components/Products'
-import { FcCheckmark } from 'react-icons/fc'
-import iRadioLogo from '../public/iRadioLogo.png'
-import v68 from '../public/v68Iradio.png'
-import sirimV68 from '../public/v68IradioSirim.jpeg'
-import { useState } from 'react'
+} from "@chakra-ui/react"
+import Image from "next/image"
+import { ProductCard } from "../components/Products"
+import { FcCheckmark } from "react-icons/fc"
+import iRadioLogo from "../public/iRadioLogo.png"
+import v68 from "../public/v68Iradio.png"
+import sirimV68 from "../public/v68IradioSirim.jpeg"
+import { useState } from "react"
+import Head from "next/head"
 
 type Props = {}
 
 const functions = [
   {
     id: 1,
-    title: '16 Programmable Side Keys',
+    title: "16 Programmable Side Keys",
   },
   {
     id: 2,
-    title: 'CTCSS/DCS Code',
+    title: "CTCSS/DCS Code",
   },
   {
     id: 3,
-    title: 'High/Low Power Switching',
+    title: "High/Low Power Switching",
   },
   {
     id: 4,
-    title: 'Wide/Narrow Band Switching',
+    title: "Wide/Narrow Band Switching",
   },
   {
     id: 5,
-    title: 'Scanning',
+    title: "Scanning",
   },
   {
     id: 6,
-    title: 'Monitor',
+    title: "Monitor",
   },
   {
     id: 7,
-    title: 'Battery Saving',
+    title: "Battery Saving",
   },
   {
     id: 8,
-    title: 'Low Battery Alerts',
+    title: "Low Battery Alerts",
   },
   {
     id: 9,
-    title: 'Emergency Alarm',
+    title: "Emergency Alarm",
   },
   {
     id: 10,
-    title: 'Additional Encryption',
+    title: "Additional Encryption",
   },
   {
     id: 11,
-    title: 'TOT',
+    title: "TOT",
   },
 ]
 
 const tableGeneral: any = [
-  { title: 'Frequency Range', value: '400MHz-480MHz' },
-  { title: 'Channel Storage', value: '16' },
-  { title: 'Voltage', value: 'DC3.7V' },
-  { title: 'Antenna Impedance', value: '50Ω' },
-  { title: 'Frequency Stability', value: '±20ppm' },
-  { title: 'Working Temperature', value: '-10°C~+50°C' },
-  { title: 'Working Current', value: 'TX Status: ≤1.3A | RX Status: ≤0.45A' },
-  { title: 'Battery Capacity', value: '1100mAh' },
-  { title: 'Dimension', value: '99×62×32mm (without antenna & belt clip)' },
-  { title: 'Weight', value: '142g (without antenna & belt clip)' },
+  { title: "Frequency Range", value: "400MHz-480MHz" },
+  { title: "Channel Storage", value: "16" },
+  { title: "Voltage", value: "DC3.7V" },
+  { title: "Antenna Impedance", value: "50Ω" },
+  { title: "Frequency Stability", value: "±20ppm" },
+  { title: "Working Temperature", value: "-10°C~+50°C" },
+  { title: "Working Current", value: "TX Status: ≤1.3A | RX Status: ≤0.45A" },
+  { title: "Battery Capacity", value: "1100mAh" },
+  { title: "Dimension", value: "99×62×32mm (without antenna & belt clip)" },
+  { title: "Weight", value: "142g (without antenna & belt clip)" },
 ]
 
 const tableTramsmitting = [
-  { title: 'TX Power', value: '2W±0.3 (DC4.2V)' },
-  { title: 'Modulation Mode', value: 'F3E' },
+  { title: "TX Power", value: "2W±0.3 (DC4.2V)" },
+  { title: "Modulation Mode", value: "F3E" },
   {
-    title: 'Maximum Frequency Deviation',
-    value: '≤ 5KHz (Wide Band); ≤ 2.5KHz (Narrow Band)',
+    title: "Maximum Frequency Deviation",
+    value: "≤ 5KHz (Wide Band); ≤ 2.5KHz (Narrow Band)",
   },
-  { title: 'Spurious Power', value: '≤7.5µW' },
+  { title: "Spurious Power", value: "≤7.5µW" },
   {
-    title: 'Adjacent Frequency Power',
-    value: '≤ -65dB (Wide Band); ≤ -60dB (Narrow Band)',
+    title: "Adjacent Frequency Power",
+    value: "≤ -65dB (Wide Band); ≤ -60dB (Narrow Band)",
   },
 ]
 
 const tableReceiving = [
   {
-    title: 'RX Sensitivity (12dB SINAD)',
-    value: '≤ 0.2µV (Wide Band); ≤ 0.25µV (Narrow Band)',
+    title: "RX Sensitivity (12dB SINAD)",
+    value: "≤ 0.2µV (Wide Band); ≤ 0.25µV (Narrow Band)",
   },
-  { title: 'Audio Power', value: '≤ 1W (8ohm)' },
+  { title: "Audio Power", value: "≤ 1W (8ohm)" },
   {
-    title: 'Audio Distortion',
-    value: '≤ 5%',
+    title: "Audio Distortion",
+    value: "≤ 5%",
   },
-  { title: 'Clustter Suppression', value: '≥ 65dB' },
+  { title: "Clustter Suppression", value: "≥ 65dB" },
 ]
 
 const Products = (props: Props) => {
   const [show, setShow] = useState<boolean>(false)
 
   return (
-    <>
+    <div>
+      <Head>
+        <title>V68 Iradio｜Walkie-Talkie Malaysia</title>
+        <meta content="iRadio V68" property="og:title" />
+        <meta name="robots" content="index,follow" />
+        <link rel="canonical" href="https://www.bantingcomm.com.my/v68Iradio" />
+      </Head>
       <Box pt={28} pb={24} px={4}>
-        <Container maxW={'1440px'}>
+        <Container maxW={"1440px"}>
           {/* Heading */}
           <Flex
-            direction={{ base: 'column', md: 'row' }}
+            direction={{ base: "column", md: "row" }}
             align="center"
             gap={{ base: 0, md: 12 }}
           >
@@ -142,14 +149,14 @@ const Products = (props: Props) => {
               alt="Iradio Logo"
               priority={true}
             />
-            <Heading color={'green.900'} py={8} size="xl">
+            <Heading color={"green.900"} py={8} size="xl">
               V68 Iradio
             </Heading>
           </Flex>
 
           {/* Image, Functions and Details */}
           <Grid
-            templateColumns={{ base: 'auto', lg: 'repeat(5,1fr)' }}
+            templateColumns={{ base: "auto", lg: "repeat(5,1fr)" }}
             gap={{ base: 0, lg: 12 }}
           >
             <GridItem mb={{ base: 8, lg: 0 }} colSpan={2}>
@@ -170,10 +177,10 @@ const Products = (props: Props) => {
                   <Highlight
                     query="Functions"
                     styles={{
-                      px: '2',
-                      py: '1',
-                      rounded: '5px',
-                      bg: 'yellow.100',
+                      px: "2",
+                      py: "1",
+                      rounded: "5px",
+                      bg: "yellow.100",
                     }}
                   >
                     Functions
@@ -182,10 +189,10 @@ const Products = (props: Props) => {
                 <SimpleGrid mt={8} columns={{ base: 1, sm: 2 }} spacing={2}>
                   {functions.map((item) => (
                     <HStack key={item.id}>
-                      <Box color={'green.400'} px={2}>
+                      <Box color={"green.400"} px={2}>
                         <FcCheckmark fontSize="1.5rem" />
                       </Box>
-                      <VStack align={'start'}>
+                      <VStack align={"start"}>
                         <Text>{item.title}</Text>
                       </VStack>
                     </HStack>
@@ -198,10 +205,10 @@ const Products = (props: Props) => {
                   <Highlight
                     query="Features"
                     styles={{
-                      px: '2',
-                      py: '1',
-                      rounded: '5px',
-                      bg: 'yellow.100',
+                      px: "2",
+                      py: "1",
+                      rounded: "5px",
+                      bg: "yellow.100",
                     }}
                   >
                     Features
@@ -388,7 +395,7 @@ const Products = (props: Props) => {
           </SimpleGrid>
         </Container>
       </Box>
-    </>
+    </div>
   )
 }
 

@@ -15,95 +15,105 @@ import {
   Td,
   Tbody,
   Highlight,
-} from '@chakra-ui/react'
-import Image from 'next/image'
-import { ProductCard } from '../components/Products'
-import { FcCheckmark } from 'react-icons/fc'
-import MytetraLogo from '../public/MytetraLogo.png'
-import DM301MytetraSirim1 from '../public/DM301MytetraSirim1.jpeg'
-import DM301MytetraSirim2 from '../public/DM301MytetraSirim2.jpeg'
-import DM301 from '../public/DM301Mytetra.png'
+} from "@chakra-ui/react"
+import Image from "next/image"
+import { ProductCard } from "../components/Products"
+import { FcCheckmark } from "react-icons/fc"
+import MytetraLogo from "../public/MytetraLogo.png"
+import DM301MytetraSirim1 from "../public/DM301MytetraSirim1.jpeg"
+import DM301MytetraSirim2 from "../public/DM301MytetraSirim2.jpeg"
+import DM301 from "../public/DM301Mytetra.png"
+import Head from "next/head"
 
 type Props = {}
 
 const functions = [
   {
     id: 1,
-    title: 'Elegant Design',
+    title: "Elegant Design",
   },
   {
     id: 2,
-    title: 'Real-time Communication',
+    title: "Real-time Communication",
   },
   {
     id: 3,
-    title: 'Battery Save / Warning',
+    title: "Battery Save / Warning",
   },
   {
     id: 4,
-    title: 'Certified by SIRIM',
+    title: "Certified by SIRIM",
   },
   {
     id: 5,
-    title: 'Three-pin Plug Charger',
+    title: "Three-pin Plug Charger",
   },
   {
     id: 6,
-    title: 'IP54',
+    title: "IP54",
   },
 ]
 
 const tableGeneral: any = [
   {
-    title: 'SIRIM Registration No',
-    value: 'RGRC/04A/0521/5(21-2317)',
+    title: "SIRIM Registration No",
+    value: "RGRC/04A/0521/5(21-2317)",
   },
-  { title: 'Working Frequency', value: '400-480Mhz' },
-  { title: 'CStandby Time', value: '55 Hours Standard | 71 Hours Optional' },
-  { title: 'IP Level', value: 'IP54' },
-  { title: 'Maximum number of Zones', value: '2' },
-  { title: 'Frequency Stability', value: '0.5ppm' },
-  { title: 'Maximum number of Channels Per Zone', value: '16' },
-  { title: 'Number of Channels', value: '32' },
+  { title: "Working Frequency", value: "400-480Mhz" },
+  { title: "CStandby Time", value: "55 Hours Standard | 71 Hours Optional" },
+  { title: "IP Level", value: "IP54" },
+  { title: "Maximum number of Zones", value: "2" },
+  { title: "Frequency Stability", value: "0.5ppm" },
+  { title: "Maximum number of Channels Per Zone", value: "16" },
+  { title: "Number of Channels", value: "32" },
   {
-    title: 'Battery Capacity',
-    value: '1950',
-  },
-  {
-    title: 'Power Output',
-    value: '1W(L) 5W(H)',
+    title: "Battery Capacity",
+    value: "1950",
   },
   {
-    title: 'Rated Audio',
-    value: '1000mW',
+    title: "Power Output",
+    value: "1W(L) 5W(H)",
   },
   {
-    title: 'Frequency Modulation Method',
-    value: '11KOF3E/16KOFE (12.5KHz/25KHz)',
+    title: "Rated Audio",
+    value: "1000mW",
   },
   {
-    title: 'Working temperature',
-    value: '-30°C~+50°C',
+    title: "Frequency Modulation Method",
+    value: "11KOF3E/16KOFE (12.5KHz/25KHz)",
   },
   {
-    title: '4FSK Digital Modulation',
-    value: '12.5KHz Data Only:7KGOFXD | 12.5KHz Data Voice:7K60FXW',
+    title: "Working temperature",
+    value: "-30°C~+50°C",
   },
   {
-    title: 'Dimension',
-    value: '256x62x42mm',
+    title: "4FSK Digital Modulation",
+    value: "12.5KHz Data Only:7KGOFXD | 12.5KHz Data Voice:7K60FXW",
   },
-  { title: 'Weight', value: '239g' },
+  {
+    title: "Dimension",
+    value: "256x62x42mm",
+  },
+  { title: "Weight", value: "239g" },
 ]
 
 const products = (props: Props) => {
   return (
-    <>
+    <div>
+      <Head>
+        <title>Mytetra DM301｜Walkie-Talkie Malaysia</title>
+        <meta content="iRadio V68" property="og:title" />
+        <meta name="robots" content="index,follow" />
+        <link
+          rel="canonical"
+          href="https://www.bantingcomm.com.my/dm301Mytetra"
+        />
+      </Head>
       <Box pt={28} pb={24} px={4}>
-        <Container maxW={'1440px'}>
+        <Container maxW={"1440px"}>
           {/* Heading */}
           <Flex
-            direction={{ base: 'column', md: 'row' }}
+            direction={{ base: "column", md: "row" }}
             align="center"
             gap={{ base: 0, md: 12 }}
           >
@@ -116,14 +126,14 @@ const products = (props: Props) => {
               priority={true}
             />
 
-            <Heading color={'green.900'} py={8} size="xl">
+            <Heading color={"green.900"} py={8} size="xl">
               DM301 Mytetra
             </Heading>
           </Flex>
 
           {/* Image, Functions and Details */}
           <Grid
-            templateColumns={{ base: 'auto', lg: 'repeat(5,1fr)' }}
+            templateColumns={{ base: "auto", lg: "repeat(5,1fr)" }}
             gap={{ base: 0, lg: 12 }}
           >
             <GridItem mb={{ base: 8, lg: 0 }} colSpan={2}>
@@ -143,10 +153,10 @@ const products = (props: Props) => {
                     <Highlight
                       query="Functions"
                       styles={{
-                        px: '2',
-                        py: '1',
-                        rounded: '5px',
-                        bg: 'yellow.100',
+                        px: "2",
+                        py: "1",
+                        rounded: "5px",
+                        bg: "yellow.100",
                       }}
                     >
                       Functions
@@ -161,10 +171,10 @@ const products = (props: Props) => {
                 >
                   {functions.map((item) => (
                     <HStack key={item.id}>
-                      <Box color={'green.400'} px={2}>
+                      <Box color={"green.400"} px={2}>
                         <FcCheckmark fontSize="1.5rem" />
                       </Box>
-                      <VStack align={'start'}>
+                      <VStack align={"start"}>
                         <Text>{item.title}</Text>
                       </VStack>
                     </HStack>
@@ -247,7 +257,7 @@ const products = (props: Props) => {
           </SimpleGrid>
         </Container>
       </Box>
-    </>
+    </div>
   )
 }
 

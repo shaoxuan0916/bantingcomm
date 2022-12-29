@@ -15,116 +15,126 @@ import {
   Td,
   Tbody,
   Highlight,
-} from '@chakra-ui/react'
-import Image from 'next/image'
-import { ProductCard } from '../components/Products'
-import { FcCheckmark } from 'react-icons/fc'
-import iRadioLogo from '../public/iRadioLogo.png'
-import sirimCP268 from '../public/cp268iRadioSirim.jpeg'
-import cp268 from '../public/cp268iRadio.png'
+} from "@chakra-ui/react"
+import Image from "next/image"
+import { ProductCard } from "../components/Products"
+import { FcCheckmark } from "react-icons/fc"
+import iRadioLogo from "../public/iRadioLogo.png"
+import sirimCP268 from "../public/cp268iRadioSirim.jpeg"
+import cp268 from "../public/cp268iRadio.png"
+import Head from "next/head"
 
 type Props = {}
 
 const functions = [
   {
     id: 1,
-    title: '199 Channels Capacity',
+    title: "199 Channels Capacity",
   },
   {
     id: 2,
-    title: 'CTCSS/DCS Code',
+    title: "CTCSS/DCS Code",
   },
   {
     id: 3,
-    title: 'Scrambler',
+    title: "Scrambler",
   },
   {
     id: 4,
-    title: 'Compandor',
+    title: "Compandor",
   },
   {
     id: 5,
-    title: 'Frequency Hopping',
+    title: "Frequency Hopping",
   },
   {
     id: 6,
-    title: 'Emergency Alarm',
+    title: "Emergency Alarm",
   },
   {
     id: 7,
-    title: 'Hands Free VOX',
+    title: "Hands Free VOX",
   },
   {
     id: 8,
-    title: 'Voice Report',
+    title: "Voice Report",
   },
   {
     id: 9,
-    title: 'Private Call, Group Call, All Call',
+    title: "Private Call, Group Call, All Call",
   },
   {
     id: 10,
-    title: 'Emergency Alarm',
+    title: "Emergency Alarm",
   },
   {
     id: 11,
-    title: 'Additional Encryption',
+    title: "Additional Encryption",
   },
 ]
 
 const tableGeneral: any = [
-  { title: 'Frequency', value: '400MHz-480MHz' },
-  { title: 'Channel Capacity', value: '199 Channels' },
-  { title: 'Working Voltage', value: 'DC 7.4V' },
-  { title: 'Antenna Impedance', value: '50Ω' },
-  { title: 'Frequency Stability', value: '±2.5ppm' },
-  { title: 'Working Temperature', value: '-20°C~+50°C' },
-  { title: 'Working Mode', value: 'Simple or Semi-Duplex' },
+  { title: "Frequency", value: "400MHz-480MHz" },
+  { title: "Channel Capacity", value: "199 Channels" },
+  { title: "Working Voltage", value: "DC 7.4V" },
+  { title: "Antenna Impedance", value: "50Ω" },
+  { title: "Frequency Stability", value: "±2.5ppm" },
+  { title: "Working Temperature", value: "-20°C~+50°C" },
+  { title: "Working Mode", value: "Simple or Semi-Duplex" },
   {
-    title: 'Working Current',
-    value: 'Transmitting: ≤1.45A | Receiving: ≤0.4A',
+    title: "Working Current",
+    value: "Transmitting: ≤1.45A | Receiving: ≤0.4A",
   },
   {
-    title: 'Dimension',
-    value: '154*59*37mm (not contain antenna & belt clip)',
+    title: "Dimension",
+    value: "154*59*37mm (not contain antenna & belt clip)",
   },
-  { title: 'Weight', value: '218g (not contain antenna & belt clip)' },
+  { title: "Weight", value: "218g (not contain antenna & belt clip)" },
 ]
 
 const tableTramsmitting = [
-  { title: 'Modulation Mode', value: 'F3E' },
+  { title: "Modulation Mode", value: "F3E" },
   {
-    title: 'Maximum Deviation',
-    value: '≤ 5KHz (Wide Band); ≤ 2.5KHz (Narrow Band)',
+    title: "Maximum Deviation",
+    value: "≤ 5KHz (Wide Band); ≤ 2.5KHz (Narrow Band)",
   },
-  { title: 'Spurious Power', value: '≤7.5µW' },
+  { title: "Spurious Power", value: "≤7.5µW" },
   {
-    title: 'Adjacent Channel Power',
-    value: '≤ -65dB (Wide Band); ≤ -60dB (Narrow Band)',
+    title: "Adjacent Channel Power",
+    value: "≤ -65dB (Wide Band); ≤ -60dB (Narrow Band)",
   },
 ]
 
 const tableReceiving = [
   {
-    title: 'RX Sensitivity (12dB SINAD)',
-    value: '0.2µV / 25Khz; 0.25µV / 12.5KHz',
+    title: "RX Sensitivity (12dB SINAD)",
+    value: "0.2µV / 25Khz; 0.25µV / 12.5KHz",
   },
-  { title: 'Audio Power', value: '≤ 1W' },
+  { title: "Audio Power", value: "≤ 1W" },
   {
-    title: 'Audio Distortion',
-    value: '≤ 10%',
+    title: "Audio Distortion",
+    value: "≤ 10%",
   },
-  { title: 'Clustter Suppression', value: '≥ 65dB' },
+  { title: "Clustter Suppression", value: "≥ 65dB" },
 ]
 
 const products = (props: Props) => {
   return (
-    <>
+    <div>
+      <Head>
+        <title>CP-268 Iradio｜Walkie-Talkie Malaysia</title>
+        <meta content="iRadio V68" property="og:title" />
+        <meta name="robots" content="index,follow" />
+        <link
+          rel="canonical"
+          href="https://www.bantingcomm.com.my/cp268Iradio"
+        />
+      </Head>
       <Box pt={28} pb={24} px={4}>
-        <Container maxW={'1440px'}>
+        <Container maxW={"1440px"}>
           {/* Heading */}
           <Flex
-            direction={{ base: 'column', md: 'row' }}
+            direction={{ base: "column", md: "row" }}
             align="center"
             gap={{ base: 0, md: 12 }}
           >
@@ -136,14 +146,14 @@ const products = (props: Props) => {
               alt="Iradio Logo"
               priority={true}
             />
-            <Heading color={'green.900'} py={8} size="xl">
+            <Heading color={"green.900"} py={8} size="xl">
               CP-268 Iradio
             </Heading>
           </Flex>
 
           {/* Image, Functions and Details */}
           <Grid
-            templateColumns={{ base: 'auto', lg: 'repeat(5,1fr)' }}
+            templateColumns={{ base: "auto", lg: "repeat(5,1fr)" }}
             gap={{ base: 0, lg: 12 }}
           >
             <GridItem mb={{ base: 8, lg: 0 }} colSpan={2}>
@@ -161,10 +171,10 @@ const products = (props: Props) => {
                   <Highlight
                     query="Functions"
                     styles={{
-                      px: '2',
-                      py: '1',
-                      rounded: '5px',
-                      bg: 'yellow.100',
+                      px: "2",
+                      py: "1",
+                      rounded: "5px",
+                      bg: "yellow.100",
                     }}
                   >
                     Functions
@@ -177,10 +187,10 @@ const products = (props: Props) => {
                 >
                   {functions.map((item) => (
                     <HStack key={item.id}>
-                      <Box color={'green.400'} px={2}>
+                      <Box color={"green.400"} px={2}>
                         <FcCheckmark fontSize="1.5rem" />
                       </Box>
-                      <VStack align={'start'}>
+                      <VStack align={"start"}>
                         <Text>{item.title}</Text>
                       </VStack>
                     </HStack>
@@ -306,7 +316,7 @@ const products = (props: Props) => {
           </SimpleGrid>
         </Container>
       </Box>
-    </>
+    </div>
   )
 }
 
