@@ -16,10 +16,24 @@ import {
 import Image from "next/image"
 import contactImg from "../public/contact.svg"
 import contact2 from "../public/contact2.svg"
+import Head from "next/head"
 
 const contact = () => {
   return (
     <>
+      <Head>
+        <title>Contact Us｜Banting Communications (M) Sdn Bhd</title>
+        <meta
+          content="contact us | banting communications"
+          property="og:title"
+        />
+        <meta name="robots" content="index,follow" />
+        <link rel="canonical" href="https://www.bantingcomm.com.my/contact" />
+        <meta
+          name="google-site-verification"
+          content="MfgTPPe2ciU33LpFMNzhOmDvCfr0VCBkTJm3Qt_tFMI"
+        />
+      </Head>
       <div>
         <Box bgColor="gray.100" py={{ base: 8, lg: 12 }} px={4}>
           <Container maxW={"1440px"}>

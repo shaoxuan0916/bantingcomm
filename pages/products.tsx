@@ -4,10 +4,21 @@ import { Accessories, ProductCard } from "../components/Products"
 import v68 from "../public/v68Iradio.png"
 import cp268 from "../public/cp268iRadio.png"
 import DM301 from "../public/DM301Mytetra.png"
+import Head from "next/head"
 
 const products = () => {
   return (
     <>
+      <Head>
+        <title>Products｜Banting Communications (M) Sdn Bhd</title>
+        <meta content="walkie talkie malaysia" property="og:title" />
+        <meta name="robots" content="index,follow" />
+        <link rel="canonical" href="https://www.bantingcomm.com.my/products" />
+        <meta
+          name="google-site-verification"
+          content="MfgTPPe2ciU33LpFMNzhOmDvCfr0VCBkTJm3Qt_tFMI"
+        />
+      </Head>
       <div>
         <Box py={{ base: 8, lg: 12 }} px={4}>
           <Container maxW={"1440px"} pb={20}>
