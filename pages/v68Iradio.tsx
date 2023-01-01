@@ -132,6 +132,10 @@ const Products = (props: Props) => {
         <meta content="iRadio V68" property="og:title" />
         <meta name="robots" content="index,follow" />
         <link rel="canonical" href="https://www.bantingcomm.com.my/v68Iradio" />
+        <meta
+          name="google-site-verification"
+          content="MfgTPPe2ciU33LpFMNzhOmDvCfr0VCBkTJm3Qt_tFMI"
+        />
       </Head>
       <Box pt={28} pb={24} px={4}>
         <Container maxW={"1440px"}>

@@ -33,23 +33,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         strategy="afterInteractive"
         src="https://www.googletagmanager.com/gtag/js?id=G-5HYGEXR6WC"
       />
-      <Script
-        id="gtag-init"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${gtag.GA_TRACKING_ID}', {
-              page_path: window.location.pathname,
-            });
-            gtag('config', "G-5HYGEXR6WC, {
-              page_path: window.location.pathname,
-            });
-          `,
-        }}
-      />
 
       <Head>
         <meta

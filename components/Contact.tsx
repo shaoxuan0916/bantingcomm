@@ -11,10 +11,10 @@ import {
   InputGroup,
   Textarea,
   SimpleGrid,
-} from '@chakra-ui/react'
-import Image from 'next/image'
-import contactImg from '../public/contact.svg'
-import contact2 from '../public/contact2.svg'
+} from "@chakra-ui/react"
+import Image from "next/image"
+import contactImg from "../public/contact.svg"
+import contact2 from "../public/contact2.svg"
 
 type Props = {}
 
@@ -22,7 +22,7 @@ const Contact = (props: Props) => {
   return (
     <div id="contact">
       <Box bgColor="gray.100" mt={{ base: 8, lg: 12 }} px={4} pb={32} mb={12}>
-        <Container maxW={'1440px'}>
+        <Container maxW={"1440px"}>
           <Heading
             mb={{ base: 8, lg: 12 }}
             pt={20}
@@ -110,7 +110,7 @@ const Contact = (props: Props) => {
                       name="text"
                       borderColor="gray.300"
                       _hover={{
-                        borderRadius: 'gray.300',
+                        borderRadius: "gray.300",
                       }}
                       placeholder="Type your messages here"
                     />
@@ -123,7 +123,7 @@ const Contact = (props: Props) => {
                   variant="solid"
                   color="white"
                   bgColor="teal.600"
-                  _hover={{ bgColor: 'teal.700' }}
+                  _hover={{ bgColor: "teal.700" }}
                   type="submit"
                 >
                   Email Us Now !
@@ -153,6 +153,9 @@ const Contact = (props: Props) => {
                   <Box>
                     <Text mb={2} fontWeight="700" fontSize="xl">
                       Address :
+                    </Text>
+                    <Text my={2} fontWeight="700" fontSize="xl" as="h3">
+                      Banting Communication (M) Sdn Bhd
                     </Text>
                     <Text fontSize="xl" pb={4}>
                       130, Jalan Sultan Alam Shah, 42700, Banting, Selangor
@@ -188,7 +191,7 @@ const Contact = (props: Props) => {
                 </VStack>
               </VStack>
             </Box>
-            <Box display={{ base: 'none', lg: 'flex' }}>
+            <Box display={{ base: "none", lg: "flex" }}>
               <Image src={contact2} alt="contact" priority={true} />
             </Box>
           </SimpleGrid>

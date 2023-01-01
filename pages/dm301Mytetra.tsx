@@ -108,6 +108,10 @@ const products = (props: Props) => {
           rel="canonical"
           href="https://www.bantingcomm.com.my/dm301Mytetra"
         />
+        <meta
+          name="google-site-verification"
+          content="MfgTPPe2ciU33LpFMNzhOmDvCfr0VCBkTJm3Qt_tFMI"
+        />
       </Head>
       <Box pt={28} pb={24} px={4}>
         <Container maxW={"1440px"}>

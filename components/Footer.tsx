@@ -7,11 +7,11 @@ import {
   Text,
   useColorModeValue,
   VisuallyHidden,
-} from '@chakra-ui/react'
-import { FaFacebook } from 'react-icons/fa'
-import { ReactNode } from 'react'
-import Image from 'next/image'
-import logo from '../public/BatingCommunicationWalkieTalkieIradio.png'
+} from "@chakra-ui/react"
+import { FaFacebook } from "react-icons/fa"
+import { ReactNode } from "react"
+import Image from "next/image"
+import logo from "../public/BatingCommunicationWalkieTalkieIradio.png"
 
 const SocialButton = ({
   children,
@@ -24,20 +24,20 @@ const SocialButton = ({
 }) => {
   return (
     <chakra.button
-      bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-      rounded={'full'}
+      bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+      rounded={"full"}
       w={8}
       h={8}
-      cursor={'pointer'}
+      cursor={"pointer"}
       target="_blank"
-      as={'a'}
+      as={"a"}
       href={href}
-      display={'inline-flex'}
-      alignItems={'center'}
-      justifyContent={'center'}
-      transition={'background 0.3s ease'}
+      display={"inline-flex"}
+      alignItems={"center"}
+      justifyContent={"center"}
+      transition={"background 0.3s ease"}
       _hover={{
-        bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
+        bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
       }}
     >
       <VisuallyHidden>{label}</VisuallyHidden>
@@ -49,55 +49,65 @@ const SocialButton = ({
 export default function SmallCentered() {
   return (
     <Box
-      bg={useColorModeValue('white', 'gray.900')}
-      color={useColorModeValue('gray.700', 'gray.200')}
+      bg={useColorModeValue("white", "gray.900")}
+      color={useColorModeValue("gray.700", "gray.200")}
     >
       <Container
         as={Stack}
-        maxW={'1440px'}
+        maxW={"1440px"}
         py={4}
         spacing={4}
-        justify={'center'}
-        align={'center'}
+        justify={"center"}
+        align={"center"}
       >
         <Image
           src={logo}
           height="40px"
-          objectFit={'contain'}
+          objectFit={"contain"}
           alt="banting communications logo"
           priority={true}
         />
-        <Stack direction={'row'} spacing={6}>
-          <Link href={'/'}>Home</Link>
-          <Link href={'/#products'}>Products</Link>
-          <Link href={'/#contact'}>Contact</Link>
+        <Stack direction={"row"} spacing={6}>
+          <Link href={"/"}>Home</Link>
+          <Link href={"/#products"}>Products</Link>
+          <Link href={"/#contact"}>Contact</Link>
         </Stack>
       </Container>
 
       <Box
         borderTopWidth={1}
-        borderStyle={'solid'}
-        borderColor={useColorModeValue('gray.200', 'gray.700')}
+        borderStyle={"solid"}
+        borderColor={useColorModeValue("gray.200", "gray.700")}
       >
         <Container
           as={Stack}
-          maxW={'6xl'}
+          maxW={"6xl"}
           py={4}
-          direction={{ base: 'column', md: 'row' }}
+          direction={{ base: "column", md: "row" }}
           spacing={4}
-          justify={{ base: 'center', md: 'space-between' }}
-          align={{ base: 'center', md: 'center' }}
+          justify={{ base: "center", md: "space-between" }}
+          align={{ base: "center", md: "center" }}
         >
           <Box>
             <Text>© 2022 Banting Communications (M) Sdn Bhd.</Text>
-            <Text pb={4} textAlign={{ base: 'center', md: 'left' }} ml={5}>
+            <Text pb={4} textAlign={{ base: "center", md: "left" }} ml={5}>
               All rights reserved
             </Text>
+            <Box>
+              <Text
+                fontWeight={"bold"}
+                rounded="lg"
+                color={"gray.600"}
+                fontSize={"lg"}
+              >
+                Walkie Talkie Supplier in Malaysia
+              </Text>
+            </Box>
           </Box>
-          <Stack direction={'row'} spacing={6}>
+          <Stack direction={"row"} spacing={6}>
             <SocialButton
-              label={'Facebook'}
-              href={'https://www.facebook.com/bantingcommunications'}
+              label={"Facebook"}
+              href={"https://www.facebook.com/bantingcommunications"}
             >
               <FaFacebook />
             </SocialButton>

@@ -59,13 +59,14 @@ export const AccessoryCard: React.FC<AccessoryCardProps> = ({
           objectFit="contain"
           height={"300px"}
           width={"200px"}
-          alt="accessories"
+          alt="accessories of walkie talkie"
           priority={true}
         />
         <Text
           fontWeight={"semibold"}
           fontSize={{ base: "md", sm: "lg", lg: "xl", xl: "2xl" }}
           textAlign={"center"}
+          as="h4"
         >
           {name}
         </Text>
@@ -139,10 +140,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           src={imgSrc}
           objectFit={"contain"}
           height="350px"
-          alt="product"
+          alt={name}
           priority={true}
         />
-        <Text as="b" py={4} fontSize="3xl">
+        <Text as="h3" fontWeight={600} py={4} fontSize="3xl">
           {name}
         </Text>
         <Text
@@ -189,7 +190,7 @@ const Products: React.FC<ProductsProps> = ({}) => {
               name="V68 Iradio"
               desc="Located in China two-way radio town--Quanzhou, Iradio
               Electronics Co., Ltdwas established naturally and is a modern
-              technology enterprise integrating R&D, manufacture and
+              technology enterprise integrating R&D manufacture and
               distribution in a rapid developing step."
             />
 

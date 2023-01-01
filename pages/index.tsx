@@ -11,8 +11,7 @@ const Home: NextPage = () => {
       <Head>
         <title>
           Banting Communications (M) Sdn Bhd｜Walkie-Talkie
-          Malaysia｜IRadio｜Mytetra｜Two-Way Radio Systems｜Walkie Talkie
-          Terbaik
+          Malaysia｜IRadio｜Mytetra
         </title>
         <meta
           name="google-site-verification"
@@ -73,7 +72,7 @@ const Home: NextPage = () => {
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff"></meta>
+        <meta name="theme-color" content="#ffffff" />
       </Head>
 
       <HeroSection />
