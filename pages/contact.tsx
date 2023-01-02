@@ -3,18 +3,11 @@ import {
   Box,
   Heading,
   Container,
-  Button,
   VStack,
   Text,
-  FormControl,
-  FormLabel,
-  Input,
-  InputGroup,
-  Textarea,
   SimpleGrid,
 } from "@chakra-ui/react"
 import Image from "next/image"
-import contactImg from "../public/contact.svg"
 import contact2 from "../public/contact2.svg"
 import Head from "next/head"
 
